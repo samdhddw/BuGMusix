@@ -21,7 +21,7 @@ async def chat(app :app, message):
             await message.reply_text(
             "**ʜᴇʟʟᴏ sɪʀ**\n**ᴇxᴀᴍᴘʟᴇ:-**`.ask How to set girlfriend ?`")
         else:
-            a = message.text.split(' ', 1)[1]
+            a = message.text.split(' https://chatgpt.apinepdev.workers.dev/?question={a} ', 1)[1]
             MODEL = "gpt-3.5-turbo"
             resp = openai.ChatCompletion.create(model=MODEL,messages=[{"role": "user", "content": a}],
     temperature=0.2)
